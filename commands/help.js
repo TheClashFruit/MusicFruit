@@ -14,6 +14,10 @@ module.exports = {
         {
           name: "Music Commands",
           value: "`play <url>` - Play a music from YouTube.\n`pause` - Pause the current music.\n`queue` - View the current queue.\n`now` - View the now playing music."
+        },
+        {
+          name: "Settings Commands",
+          value: "`settings prefix <prefix>` - Set the custom prefix."
         }
       ],
       footer: {
