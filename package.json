@@ -1,0 +1,24 @@
+{
+  "name": "musicfruit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "TheClashFruit",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheClashFruit/MusicFruit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TheClashFruit/MusicFruit/issues"
+  },
+  "homepage": "https://github.com/TheClashFruit/MusicFruit#readme",
+  "description": "",
+  "dependencies": {
+    "@supabase/supabase-js": "^1.11.13",
+    "discord.js": "^12.5.3",
+    "dotenv": "^9.0.2"
+  }
+}
