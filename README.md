@@ -25,3 +25,7 @@
   <b>queue</b>,
   <b>now</b>
 </p>
+
+<p align="center">
+  For info about contributions check CONTRIBUTING.md
+</p>
