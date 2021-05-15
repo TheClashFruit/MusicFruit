@@ -12,6 +12,13 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const clientCommands = new Discord.Collection();
 
+const Statcord = require("statcord.js");
+const sCord = new Statcord.Client({
+  client,
+  key: process.env.STATCORD_TOKEN,
+});
+
+
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
 commandFiles.forEach(commandFile => {
@@ -21,6 +28,8 @@ commandFiles.forEach(commandFile => {
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
+
+  sCord.autopost();
 });
 
 client.on('message', async message => {
@@ -49,6 +58,8 @@ client.on('message', async message => {
   const command = args.shift().toLowerCase();
 
   if (!clientCommands.has(command)) return;
+
+  sCord.postCommand(command, message.author.id);
 
   try {
     clientCommands.get(command).execute(message, {
