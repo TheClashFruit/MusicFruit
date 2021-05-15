@@ -13,3 +13,15 @@
   <img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/TheClashFruit/MusicFruit?label=issues&style=for-the-badge">
   <img alt="GitHub" src="https://img.shields.io/github/license/TheClashFruit/MusicFruit?style=for-the-badge">
 </p>
+
+<h3 align="center">Commands</h3>
+
+<p align="center">
+  <b>help</b>,
+  <b>info</b>,
+  <b>status</b>,
+  <b>play &lt;url&gt;</b>,
+  <b>pause</b>,
+  <b>queue</b>,
+  <b>now</b>
+</p>
