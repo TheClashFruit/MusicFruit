@@ -58,7 +58,7 @@ client.on('message', async message => {
   }
 });
 
-client.on('guildCreate', guild => {
+client.on('guildCreate', async guild => {
   const { data, error } = await supabase
     .from('servers')
     .insert([
@@ -68,7 +68,7 @@ client.on('guildCreate', guild => {
   console.log('Joined Guild: ' + guild.name);
 });
 
-client.on('guildDelete', guild => {
+client.on('guildDelete', async guild => {
   const { data, error } = await supabase
     .from('servers')
     .delete()
