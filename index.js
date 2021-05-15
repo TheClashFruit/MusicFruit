@@ -51,7 +51,10 @@ client.on('message', async message => {
   if (!clientCommands.has(command)) return;
 
   try {
-    clientCommands.get(command).execute(message, args);
+    clientCommands.get(command).execute(message, {
+      msgArgs: args,
+      prefix: prefix
+    });
   } catch (error) {
     console.error(error);
     message.reply('There was an error trying to execute that command!');
