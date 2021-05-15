@@ -18,7 +18,6 @@ const sCord = new Statcord.Client({
   key: process.env.STATCORD_TOKEN,
 });
 
-
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
 commandFiles.forEach(commandFile => {
@@ -64,10 +63,11 @@ client.on('message', async message => {
   try {
     clientCommands.get(command).execute(message, {
       msgArgs: args,
-      prefix: prefix
+      prefix: prefix,
+      db: supabase
     });
   } catch (error) {
-    console.error(error);
+    console.log(error);
     message.reply('There was an error trying to execute that command!');
   }
 });
