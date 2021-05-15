@@ -64,7 +64,8 @@ client.on('message', async message => {
     clientCommands.get(command).execute(message, {
       msgArgs: args,
       prefix: prefix,
-      db: supabase
+      db: supabase,
+      botClient: client
     });
   } catch (error) {
     console.log(error);
