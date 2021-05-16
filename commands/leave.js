@@ -1,6 +1,6 @@
 module.exports = {
-  name: 'join',
-  description: 'Join Command.',
+  name: 'leave',
+  description: 'Leave Command.',
   async execute(message, args) {
     if (!message.member.voice.channel) {
       message.reply('Join a Voice Channel first.');
