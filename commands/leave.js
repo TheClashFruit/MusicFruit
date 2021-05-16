@@ -7,6 +7,8 @@ module.exports = {
       return;
     }
 
+    const vcID = message.member.voice.channelID;
+
     let { data: servers, errorSelect } = await args.db
       .from('servers')
       .select("*")
