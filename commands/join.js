@@ -14,7 +14,7 @@ module.exports = {
       .select("*")
       .eq('id', message.guild.id);
 
-    if (vcID == servers[0].channel) {
+    if (servers[0].channel != null) {
       message.reply('The bot is already in a voice channel.');
       return;
     }
