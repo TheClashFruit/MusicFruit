@@ -7,7 +7,7 @@ module.exports = {
       return;
     }
 
-    let { data: servers, error } = await args.db
+    let { data: servers, errorSelect } = await args.db
       .from('servers')
       .select("*")
       .eq('id', message.guild.id);
