@@ -7,6 +7,11 @@ module.exports = {
       .select("*")
       .eq('id', message.guild.id);
 
+    if (!servers[0].nowPlayingData) {
+      message.reply('Nothing is playing.');
+      return;
+    }
+
     message.channel.send('Now plying: `' + servers[0].nowPlayingData.videoDetails.title + '`');
   }
 }
