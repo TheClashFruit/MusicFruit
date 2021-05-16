@@ -16,7 +16,7 @@ module.exports = {
       .select("*")
       .eq('id', message.guild.id);
 
-    if (vcID == servers[0].channel) {
+    if (vcID != servers[0].channel) {
       message.reply('You are not in the same voice channel as the bot.');
       return;
     }
