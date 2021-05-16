@@ -9,8 +9,19 @@ module.exports = {
       return;
     }
 
-    const vcConnection = await message.member.voice.channel.join();
     const vcID = message.member.voice.channelID;
+
+    let { data: servers, error } = await args.db
+      .from('servers')
+      .select("*")
+      .eq('id', message.guild.id);
+
+    if (vcID == servers[0].channel) {
+      message.reply('You are not in the same voice channel as the bot.');
+      return;
+    }
+
+    const vcConnection = await message.member.voice.channel.join();
 
     const { data, error } = await args.db
       .from('servers')

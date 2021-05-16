@@ -13,7 +13,7 @@ module.exports = {
         },
         {
           name: "Music Commands",
-          value: "`play <url>` - Play a music from YouTube.\n`pause` - Pause the current music.\n`queue` - View the current queue.\n`now` - View the now playing music."
+          value: "`play <url>` - Play a music from YouTube.\n`pause` - Pause the current music.\n`queue` - View the current queue.\n`now` - View the now playing music.\n`join` - The bot will join to your vc.\n`leave` - The bot will leave to your vc."
         },
         {
           name: "Settings Commands",
