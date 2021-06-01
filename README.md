@@ -29,3 +29,7 @@
 <p align="center">
   For info about contributions check CONTRIBUTING.md
 </p>
+
+<p align="center">
+  <b>WARNING!</b> This bot is discontinued.
+</p>
